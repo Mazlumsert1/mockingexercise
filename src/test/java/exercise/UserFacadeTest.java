@@ -35,7 +35,9 @@ public class UserFacadeTest {
   public void authenticateValidUserWrongPW(){
     //Given (in setup)
     //When
-    LoginStatus res = facade.verifyUser("Jan", "kfjdlsjaf");
+    LoginStatus res = facade.verifyUser("lam", "kfjdlsjaf");
+
+    // ORIGINAL LoginStatus res = facade.verifyUser("Jan", "kfjdlsjaf");
     //Then
     assertThat(res,is(LoginStatus.INVALID_PASSWORD));
   }
